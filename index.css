@@ -568,6 +568,10 @@ table {
 			.additional__content__item__logo {
 				width: 48px;
 				height: 48px;
+
+				path {
+					fill: var(--brown100);
+				}
 			}
 
 			.additional__content__item__title {
