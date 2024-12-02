@@ -303,9 +303,16 @@ table {
 
 	.card {
 		display: block;
-		border-radius: 0px;
 		background-color: #ffffff;
-		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+		border: 1px solid var(--brown100);
+		border-radius: 20px;
+	}
+
+	h2 {
+		font-family: var(--font-family__primary);
+		font-size: var(--font-size-6xl);
+		color: var(--black100);
+		text-decoration: underline;
 	}
 
 	.time_and_place__calendar {
@@ -319,14 +326,6 @@ table {
 		.card {
 			display: flex;
 			width: 100%;
-		}
-
-		h3 {
-			width: 100%;
-			font-family: var(--font-family__primary);
-			color: var(--brown100);
-			font-size: var(--font-size-4xl);
-			text-decoration: underline;
 		}
 
 		table {
@@ -360,6 +359,7 @@ table {
 			}
 			tr:first-child th {
 				border-top: none;
+				font-size: var(--font-size-xxl);
 			}
 			tr:last-child td {
 				border-bottom: none;
@@ -391,14 +391,6 @@ table {
 		text-align: center;
 		align-items: center;
 		gap: var(--spacing-m);
-
-		h3 {
-			width: 100%;
-			font-family: var(--font-family__primary);
-			color: var(--brown100);
-			font-size: var(--font-size-4xl);
-			text-decoration: underline;
-		}
 
 		.time_and_place__place__image {
 			display: flex;
