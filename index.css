@@ -308,6 +308,22 @@ table {
 		border-radius: 20px;
 	}
 
+	.countdown {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--spacing-xs);
+		font-size: var(--font-size-xl);
+
+		.countdown__text--uppercase {
+			text-transform: uppercase;
+			font-size: var(--font-size-l);
+			@media screen and (max-width: 600px) {
+				font-size: var(--font-size-m);
+			}
+		}
+	}
+
 	h2 {
 		font-family: var(--font-family__primary);
 		font-size: var(--font-size-6xl);
