@@ -5,17 +5,18 @@ function countdown(date, elementId) {
 
 	const intervalId = setInterval(() => {
 		const timeDiff = endDate.getTime() - now.getTime();
-		const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-		const months = Math.floor(days / 30);
+
+		const months = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 30));
+		const days = Math.floor(
+			(timeDiff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+		);
 		const hours = Math.floor(
 			(timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 		);
 		const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 		const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-		countdownElement.innerHTML = `${months}&nbsp;mjeseci, ${
-			days % 30
-		}&nbsp;dana, ${hours}&nbsp;sati, ${minutes}&nbsp;minuta, ${seconds}&nbsp;sekundi`;
+		countdownElement.innerHTML = `${months}&nbsp;mjeseci, ${days}&nbsp;dana, ${hours}&nbsp;sati, ${minutes}&nbsp;minuta, ${seconds}&nbsp;sekundi`;
 
 		now.setSeconds(now.getSeconds() + 1);
 		if (timeDiff <= 0) {
@@ -24,4 +25,4 @@ function countdown(date, elementId) {
 	}, 1000);
 }
 
-countdown('2025-05-01T00:00:00', 'countdown');
+countdown('2025-06-20T00:00:00', 'countdown');

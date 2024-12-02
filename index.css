@@ -520,11 +520,12 @@ table {
 
 			.contact__text--ephesised {
 				font-weight: bold;
-				font-size: var(--font-size-3xl);
+				font-size: var(--font-size-2xl);
 			}
 
 			.contact__text--pretty {
 				font-family: var(--font-family__primary);
+				color: var(--brown100);
 			}
 
 			a {
