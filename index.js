@@ -26,3 +26,25 @@ function countdown(date, elementId) {
 }
 
 countdown('2025-06-20T00:00:00', 'countdown');
+
+function setUpModal() {
+	const modal = document.getElementById('place_image_modal');
+	const trigger = document.getElementById('open_place_image_modal');
+	const close = document.getElementsByClassName('close')[0];
+
+	trigger.onclick = function () {
+		modal.style.display = 'block';
+	};
+
+	close.onclick = function () {
+		modal.style.display = 'none';
+	};
+
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = 'none';
+		}
+	};
+}
+
+setUpModal();

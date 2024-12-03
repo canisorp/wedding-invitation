@@ -154,7 +154,45 @@
 			<div class="time_and_place__place">
 				<h2>Mjesto</h2>
 				<div class="time_and_place__place__image card">
-					<img src="./public/villa_gala.avif" alt="Villa Gala" />
+					<div
+						class="time_and_place__place__image_container"
+						id="open_place_image_modal"
+					>
+						<div
+							class="time_and_place__place__image_slide time_and_place__place__image_slide--left"
+						>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5 8L10 3L10.7 3.7L6.4 8L10.7 12.3L10 13L5 8Z"
+									fill="black"
+								/>
+							</svg>
+						</div>
+						<img src="./public/villa_gala_1.avif" alt="Villa Gala" />
+
+						<div
+							class="time_and_place__place__image_slide time_and_place__place__image_slide--right"
+						>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5 8L10 3L10.7 3.7L6.4 8L10.7 12.3L10 13L5 8Z"
+									fill="black"
+								/>
+							</svg>
+						</div>
+					</div>
 					<div class="time_and_place__place__image__desc">
 						<p>Wedding resort Villa Gala</p>
 						<a href="https://maps.app.goo.gl/cPbFGW1hErrYN92dA"
@@ -298,5 +336,43 @@
 			</div>
 			<div>Copyright © Filip Bašić</div>
 		</footer>
+		<modal id="place_image_modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body__slide modal-body__slide--left">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M5 8L10 3L10.7 3.7L6.4 8L10.7 12.3L10 13L5 8Z"
+								fill="black"
+							/>
+						</svg>
+					</div>
+					<img src="./public/villa_gala_1.avif" alt="Villa Gala" />
+					<div class="modal-body__slide modal-body__slide--right">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M5 8L10 3L10.7 3.7L6.4 8L10.7 12.3L10 13L5 8Z"
+								fill="black"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</modal>
 	</body>
 </html>
