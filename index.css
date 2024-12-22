@@ -186,6 +186,28 @@ table {
 	border-bottom: 1px solid var(--brown100);
 }
 
+.slideshow {
+	.slide_image {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* Fading animation */
+	.fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0.4;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -403,7 +425,7 @@ table {
 	}
 
 	.time_and_place__place {
-		flex: 1;
+		flex: 1 0;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
@@ -411,17 +433,17 @@ table {
 		gap: var(--spacing-m);
 
 		.time_and_place__place__image {
+			flex: 1;
 			display: flex;
 			flex-direction: column;
 			overflow: hidden;
-			width: auto;
+			width: 100%;
 			gap: var(--spacing-m);
 
 			.time_and_place__place__image_container {
 				flex: 1;
 				display: flex;
 				position: relative;
-				overflow: hidden;
 				cursor: pointer;
 				transition: scale 200ms;
 
@@ -660,7 +682,7 @@ table {
 	height: 100vh;
 	overflow: hidden;
 	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.8);
 
 	.modal-content {
 		margin: 15% auto;
@@ -674,28 +696,13 @@ table {
 
 		@media only screen and (max-width: 600px) {
 			width: 95%;
-		}
-
-		ul {
-			width: 100%;
-			display: flex;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			overflow: scroll;
-			scroll-behavior: smooth;
-			scrollbar-width: none; /* Firefox */
-			-ms-overflow-style: none; /* Internet Explorer 10+ */
-			&::-webkit-scrollbar {
-				width: 0;
-				height: 0;
-			}
+			margin: 50% auto;
 		}
 
 		img {
-			border-radius: 10px;
+			aspect-ratio: 4/3;
 			width: 100%;
-			height: 100%;
+			border-radius: 10px;
 			flex: 1 0 100%;
 			object-fit: cover;
 			cursor: default;
@@ -714,6 +721,8 @@ table {
 			cursor: pointer;
 			font-size: 3rem;
 			margin: auto;
+			appearance: none;
+			-webkit-appearance: none;
 
 			svg {
 				transition: opacity 200ms;

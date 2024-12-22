@@ -34,17 +34,47 @@ function setUpModal() {
 
 	trigger.onclick = function () {
 		modal.style.display = 'block';
+		modal.style.visibility = 'visible';
 	};
 
 	close.onclick = function () {
 		modal.style.display = 'none';
+		modal.style.visibility = 'hidden';
 	};
 
 	window.onclick = function (event) {
 		if (event.target == modal) {
 			modal.style.display = 'none';
+			modal.style.visibility = 'hidden';
 		}
 	};
 }
 
 setUpModal();
+
+let currentImageIndex = 1;
+showSlides();
+function showSlides(n) {
+	let slides = document.getElementsByClassName('slide_image');
+	let allSlides = slides.length;
+	let slideCount = allSlides / 2; // image count is doubled since it is in two places
+	if (currentImageIndex > slideCount) {
+		currentImageIndex = 1;
+	}
+	if (currentImageIndex < 1) {
+		currentImageIndex = slideCount;
+	}
+	for (let i = 0; i < allSlides; i++) {
+		slides[i].style.display = 'none';
+		slides[i].style.visibility = 'hidden';
+	}
+	slides[currentImageIndex - 1].style.display = 'block';
+	slides[currentImageIndex - 1].style.visibility = 'visible';
+	slides[currentImageIndex + slideCount - 1].style.display = 'block';
+	slides[currentImageIndex + slideCount - 1].style.visibility = 'visible';
+}
+
+function changeSlide(n) {
+	currentImageIndex += n;
+	showSlides();
+}
