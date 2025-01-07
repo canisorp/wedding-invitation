@@ -187,28 +187,6 @@ table {
 	border-bottom: 1px solid var(--brown100);
 }
 
-.slideshow {
-	.slide_image {
-		display: none;
-		visibility: hidden;
-	}
-
-	/* Fading animation */
-	.fade {
-		animation-name: fade;
-		animation-duration: 1.5s;
-	}
-
-	@keyframes fade {
-		from {
-			opacity: 0.4;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-}
-
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -345,6 +323,7 @@ table {
 		align-items: center;
 		gap: var(--spacing-xs);
 		font-size: var(--font-size-xl);
+		min-height: 76px;
 
 		.countdown__text--uppercase {
 			text-transform: uppercase;
