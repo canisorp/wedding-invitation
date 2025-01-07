@@ -27,42 +27,16 @@ function countdown(date, elementId) {
 
 countdown('2025-06-20T00:00:00', 'countdown');
 
-function setUpModal() {
-	const modal = document.getElementById('place_image_modal');
-	const trigger = document.getElementById('open_place_image_modal');
-	const close = document.getElementsByClassName('close')[0];
-
-	trigger.onclick = function () {
-		modal.style.display = 'block';
-		modal.style.visibility = 'visible';
-	};
-
-	close.onclick = function () {
-		modal.style.display = 'none';
-		modal.style.visibility = 'hidden';
-	};
-
-	window.onclick = function (event) {
-		if (event.target == modal) {
-			modal.style.display = 'none';
-			modal.style.visibility = 'hidden';
-		}
-	};
-}
-
-setUpModal();
-
 let currentImageIndex = 1;
 showSlides();
 function showSlides(n) {
 	let slides = document.getElementsByClassName('slide_image');
 	let allSlides = slides.length;
-	let slideCount = allSlides / 2; // image count is doubled since it is in two places
-	if (currentImageIndex > slideCount) {
+	if (currentImageIndex > allSlides) {
 		currentImageIndex = 1;
 	}
 	if (currentImageIndex < 1) {
-		currentImageIndex = slideCount;
+		currentImageIndex = allSlides;
 	}
 	for (let i = 0; i < allSlides; i++) {
 		slides[i].style.display = 'none';
@@ -70,8 +44,6 @@ function showSlides(n) {
 	}
 	slides[currentImageIndex - 1].style.display = 'block';
 	slides[currentImageIndex - 1].style.visibility = 'visible';
-	slides[currentImageIndex + slideCount - 1].style.display = 'block';
-	slides[currentImageIndex + slideCount - 1].style.visibility = 'visible';
 }
 
 function changeSlide(n) {

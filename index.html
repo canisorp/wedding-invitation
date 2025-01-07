@@ -15,6 +15,7 @@
 		/>
 		<link rel="stylesheet" href="./index.css" />
 		<link rel="icon" href="./public/logo.svg" />
+		<link rel="prefetch" href="./public/hero.jpg" />
 		<script src="./index.js" defer></script>
 	</head>
 	<body class="main">
@@ -154,10 +155,19 @@
 			<div class="time_and_place__place">
 				<h2>Mjesto</h2>
 				<div class="time_and_place__place__image card">
-					<div
-						class="time_and_place__place__image_container slideshow"
-						id="open_place_image_modal"
-					>
+					<div class="time_and_place__place__image_container">
+						<button
+							class="time_and_place__place__image_container__arrow time_and_place__place__image_container__arrow--left"
+							onclick="changeSlide(-1)"
+						>
+							&#8249;
+						</button>
+						<button
+							class="time_and_place__place__image_container__arrow time_and_place__place__image_container__arrow--right"
+							onclick="changeSlide(1)"
+						>
+							&#8250;
+						</button>
 						<img
 							class="slide_image fade"
 							src="./public/villa_gala_1.jpg"
@@ -342,62 +352,5 @@
 			</div>
 			<div>Copyright © Filip Bašić</div>
 		</footer>
-		<modal id="place_image_modal" class="modal">
-			<div class="modal-content slideshow">
-				<button class="close">&times;</button>
-				<button
-					class="modal-content__arrow modal-content__arrow--left"
-					onclick="changeSlide(-1)"
-				>
-					&#8249;
-				</button>
-				<button
-					class="modal-content__arrow modal-content__arrow--right"
-					onclick="changeSlide(1)"
-				>
-					&#8250;
-				</button>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_1.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_2.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_3.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_4.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_5.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_6.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_7.jpg"
-					alt="Villa Gala"
-				/>
-				<img
-					class="slide_image fade"
-					src="./public/villa_gala_8.jpg"
-					alt="Villa Gala"
-				/>
-			</div>
-		</modal>
 	</body>
 </html>
