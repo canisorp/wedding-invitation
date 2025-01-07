@@ -15,6 +15,7 @@
 		/>
 		<link rel="stylesheet" href="./index.css" />
 		<link rel="icon" href="./public/logo.svg" />
+		<link rel="prefetch" href="./public/hero.jpg" />
 		<script src="./index.js" defer></script>
 	</head>
 	<body class="main">
@@ -154,10 +155,19 @@
 			<div class="time_and_place__place">
 				<h2>Mjesto</h2>
 				<div class="time_and_place__place__image card">
-					<div
-						class="time_and_place__place__image_container slideshow"
-						id="open_place_image_modal"
-					>
+					<div class="time_and_place__place__image_container">
+						<button
+							class="time_and_place__place__image_container__arrow time_and_place__place__image_container__arrow--left"
+							onclick="changeSlide(-1)"
+						>
+							&#8249;
+						</button>
+						<button
+							class="time_and_place__place__image_container__arrow time_and_place__place__image_container__arrow--right"
+							onclick="changeSlide(1)"
+						>
+							&#8250;
+						</button>
 						<img
 							class="slide_image fade"
 							src="./public/villa_gala_1.jpg"
