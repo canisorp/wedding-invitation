@@ -272,7 +272,7 @@ table {
 			}
 			@media screen and (max-width: 600px) {
 				left: 10%;
-				bottom: 25%;
+				bottom: 30%;
 
 				h2 {
 					font-size: var(--font-size-3xl);
