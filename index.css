@@ -151,6 +151,7 @@ table {
 
 	/* COLORS */
 	--black100: #333333;
+	--black30: #3333334d;
 	--brown100: #c59163;
 
 	/* SPACING */
@@ -248,14 +249,20 @@ table {
 			overflow: hidden;
 			object-fit: cover;
 			border-radius: 20px;
+			@media screen and (max-width: 600px) {
+				height: 85vh;
+			}
 		}
 
 		.hero__content__date {
 			position: absolute;
 			color: white;
+			background: var(--black30);
+			border-radius: 10px;
+			padding: var(--spacing-xs);
 
-			left: 10%;
-			bottom: 35%;
+			left: 3%;
+			bottom: 40%;
 			h2 {
 				font-size: var(--font-size-6xl);
 			}
@@ -265,13 +272,13 @@ table {
 			}
 			@media screen and (max-width: 600px) {
 				left: 10%;
-				bottom: 45%;
+				bottom: 25%;
 
 				h2 {
-					font-size: var(--font-size-xxl);
+					font-size: var(--font-size-3xl);
 				}
 				h3 {
-					font-size: var(--font-size-m);
+					font-size: var(--font-size-l);
 				}
 			}
 		}
