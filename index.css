@@ -123,6 +123,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 /*RESET END*/
 
 /* VARIABLES */
@@ -439,48 +444,36 @@ table {
 
 				.time_and_place__place__image_container__arrow {
 					position: absolute;
-					z-index: 2;
-					height: 4rem;
+					top: 50%;
+					transform: translateY(-50%);
+					background-color: rgba(255, 255, 255, 0.5);
+					border: none;
 					width: 2rem;
+					height: 4rem;
+					cursor: pointer;
+					z-index: 10;
+					transition: background-color 0.3s ease;
 					display: flex;
 					justify-content: center;
-					border: none;
-					transition: scale 200ms;
-					opacity: 0.4;
-					cursor: pointer;
-					font-size: 3rem;
-					margin: auto;
-					-webkit-appearance: none;
-					-moz-appearance: none;
-					appearance: none;
-
-					svg {
-						transition: opacity 200ms;
-						opacity: 0.5;
-						scale: 1.4;
-						path {
-							fill: #ffffff;
-						}
+					align-items: center;
+					padding: 0;
+					font-size: var(--font-size-l);
+					&:hover,
+					&:focus {
+						background-color: rgba(255, 255, 255, 0.8);
 					}
 				}
 
 				.time_and_place__place__image_container__arrow--left {
 					left: 0;
-					top: 50%;
 					transform: translateY(-50%);
-					padding-left: 0.25rem;
 					border-radius: 0 2rem 2rem 0;
 				}
 
 				.time_and_place__place__image_container__arrow--right {
 					right: 0;
-					top: 50%;
 					transform: translateY(-50%);
-					padding-left: 0.75rem;
 					border-radius: 2rem 0 0 2rem;
-					svg {
-						transform: rotate(180deg);
-					}
 				}
 			}
 
