@@ -230,19 +230,20 @@ table {
 		.hero__content__image {
 			width: 100%;
 			overflow: hidden;
-			object-fit: contain;
+			object-fit: cover;
 			height: 85vh;
 		}
 
 		.hero__content__date {
 			position: absolute;
 			color: white;
-			background: var(--black30);
 			border-radius: 10px;
 			padding: var(--spacing-xs);
-
-			left: 3%;
-			bottom: 25%;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 10%;
+	
 			h2 {
 				font-size: var(--font-size-3xl);
 			}
@@ -251,8 +252,7 @@ table {
 				text-transform: uppercase;
 			}
 			@media screen and (max-width: 600px) {
-				left: 6%;
-				bottom: 25%;
+				top: 15%;
 
 				h2 {
 					font-size: var(--font-size-3xl);
